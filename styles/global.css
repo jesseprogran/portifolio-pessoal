@@ -180,3 +180,36 @@ header .right-side img {
 }
 
 /* FIM DO HEADER */
+
+
+/* COMEÇO DA SECÇÃO DE SERVIÇOS */
+#services {
+  background-color: var(--primary-color);
+  padding-block: 2rem;
+}
+
+#services .services {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+  padding-top: 1rem;
+}
+
+#services .service {
+  background-color: var(--dark-color);
+  padding: 1rem;
+  border-radius: 10px;
+}
+
+#services .service img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+#services .service h3 {
+  padding: 0.5rem;
+}
+
+#services .service p {
+  padding: 0.5rem;
+}
