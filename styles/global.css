@@ -5,7 +5,7 @@
 }
 
 :root {
-  --primary-color: #067;
+  --primary-color: rgb(29, 179, 206);
   --dark-color: #0f0f0f;
   --white-color: #fff;
   --box-shadow-color: #ffffff36;
@@ -40,10 +40,9 @@ nav {
   box-shadow: 0px 5px 10px var(--box-shadow-color);
 }
 
-nav .inner-content  {
+nav .inner-content {
   display: flex;
   justify-content: space-between;
-  align-items: center;
   padding: 1rem;
 }
 
@@ -56,4 +55,28 @@ nav .inner-content  {
   color: var(--primary-color);
 }
 
+nav ul {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+nav ul li {
+  transition: all 0.2s;
+}
+
+nav ul li:hover {
+  color: var(--primary-color);
+  transform: translateY(-3px);
+}
+
+nav ul.social-icons li {
+  font-size: 1.5rem;
+}
 /* FIM DO NAVBAR */
+
+/* COMEÇO DO HEADER */
+header {
+  padding-block: 2rem;
+}
+/* FIM DO HEADER */
