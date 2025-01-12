@@ -9,12 +9,19 @@
   --dark-color: #0f0f0f;
   --white-color: #fff;
   --box-shadow-color: #ffffff36;
+  --btn-color: #004cbe;
 }
 
 body {
   background-color: var(--dark-color);
   color: var(--white-color);
   font-family: "Courier New", Courier, monospace;
+}
+
+.inner-content {
+  max-width: 1280px;
+  padding-inline: 1rem;
+  margin-inline: auto;
 }
 
 a {
@@ -25,11 +32,46 @@ a {
 li {
   list-style: none;
 }
+button {
+  border: none;
+  background-color: transparent;
+}
 
-.inner-content {
-  max-width: 1280px;
-  padding-inline: 1rem;
-  margin-inline: 1rem;
+.section-title {
+  text-align: center;
+}
+
+.section-title span {
+  color: var(--primary-color);
+}
+
+.section-title.primary span {
+  color: var(--dark-color);
+}
+
+.section-title.dark {
+  color: var(--dark-color);
+}
+
+.section-description {
+  text-align: center;
+  padding: 1rem;
+}
+
+.btn {
+  background-color: var(--primary-color);
+  padding: 0.8rem 1rem;
+  min-width: 140px;
+  display: block;
+  text-align: center;
+  border-radius: 8px;
+  transition: all 0.2s;
+  cursor: pointer;
+  color: var(--white-color);
+}
+
+.btn:hover {
+  background-color: var(--btn-color);
 }
 
 /* COMEÇO DO NAVBAR */
@@ -37,6 +79,8 @@ li {
 nav {
   background-color: var(--white-color);
   color: var(--dark-color);
+  position: sticky;
+  top: 0;
   box-shadow: 0px 5px 10px var(--box-shadow-color);
 }
 
@@ -73,10 +117,66 @@ nav ul li:hover {
 nav ul.social-icons li {
   font-size: 1.5rem;
 }
+
+.menu-btn {
+  display: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
 /* FIM DO NAVBAR */
 
 /* COMEÇO DO HEADER */
 header {
   padding-block: 2rem;
 }
+
+header .inner-content {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+  align-items: center;
+  height: 100%;
+  min-height: 60vh;
+}
+
+header .left-side {
+  display: grid;
+  gap: 1rem;
+}
+
+header .left-side h2 {
+  font-size: 3rem;
+}
+
+header .left-side h2 span {
+  color: var(--primary-color);
+}
+
+header p {
+  line-height: 27px;
+}
+
+header .left-side .links,
+#trust .right-side .links,
+#portifolio .projects .project .links {
+  display: flex;
+  gap: 1rem;
+}
+
+header .right-side {
+  height: 500px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+header .right-side img {
+  max-width: 450px;
+  width: 500px;
+  box-shadow: 8px 8px 15px rgba(27, 159, 168, 0.692),
+    -8px -8px 15px rgba(135, 167, 189, 0.808);
+  border-radius: 50%;
+  padding: 1rem;
+}
+
 /* FIM DO HEADER */
